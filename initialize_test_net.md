@@ -28,7 +28,7 @@
 
 ## Run the testnode
 
-    *  nohup ./target/release/frontier-template-node \
+      nohup ./target/release/frontier-template-node \
 		--base-path /tmp/alice \
 		--chain local \
 		--alice \
@@ -64,7 +64,7 @@
 
 ---
 
-	*  nohup ./target/release/frontier-template-node \
+	  nohup ./target/release/frontier-template-node \
 		--base-path /tmp/bob \
 		--chain local \
 		--bob \
@@ -86,7 +86,7 @@
 
 ---
 
-     *  nohup ./target/release/frontier-template-node \
+       nohup ./target/release/frontier-template-node \
 		--base-path /tmp/charlie \
 		--chain local \
 		--charlie \
@@ -101,8 +101,13 @@
 
 
 ## How to stop and Restart
-
- * `lsof -ti : <port number> | xargs kill `
+ * show port stat: `netstat -tulup`
+ * Show specific process based on port: `lsof -i :<port number>`
+ * EX: `lsof -i :30333`
+ * Show process based on Process iD: `process -p <PID>`
+ * EX: `process -p 152436`
+ * Kill process on running specific port `lsof -ti : <port number> | xargs kill `
+ * EX: `lsof -ti :30333 | xargs kill`
  * Purge the chain
  * Restart with Run the Test Node Command
  
