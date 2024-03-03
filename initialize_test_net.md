@@ -6,11 +6,12 @@
 
 ---
 
-## Clone the Repo
+## Clone the Repo (`Not Mandatory`)
 > `git clone --branch polkadot-v0.9.42 https://github.com/polkadot-evm/frontier.git`
->>cd frontier
->>cargo check
->>cargo build
+1. cd frontier
+2. cargo check
+3. cargo build
+
 ---
 
 ## Purge the chain
