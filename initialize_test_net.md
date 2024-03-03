@@ -18,6 +18,7 @@
 
 #### Alice
 > `./target/release/frontier-template-node purge-chain --base-path /tmp/alice --chain local` 
+
 ---
 #### Bob
 > `./target/release/frontier-template-node purge-chain --base-path /tmp/bob --chain local`
