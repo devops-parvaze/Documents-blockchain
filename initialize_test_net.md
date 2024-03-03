@@ -17,13 +17,13 @@
 ## Purge the chain
 
 #### Alice
-* `./target/release/frontier-template-node purge-chain --base-path /tmp/alice --chain local` 
+> `./target/release/frontier-template-node purge-chain --base-path /tmp/alice --chain local` 
 ---
 #### Bob
-* `./target/release/frontier-template-node purge-chain --base-path /tmp/bob --chain local`
+> `./target/release/frontier-template-node purge-chain --base-path /tmp/bob --chain local`
 ----
 #### Charlie
-* `./target/release/frontier-template-node purge-chain --base-path /tmp/charlie --chain local`
+> `./target/release/frontier-template-node purge-chain --base-path /tmp/charlie --chain local`
 ----
 
 ## Run the testnode
@@ -103,11 +103,11 @@
 ## How to stop and Restart
  * show port stat: `netstat -tulup`
  * Show specific process based on port: `lsof -i :<port number>`
- * EX: `lsof -i :30333`
+   * EX: `lsof -i :30333`
  * Show process based on Process iD: `process -p <PID>`
- * EX: `process -p 152436`
+   * EX: `process -p 152436`
  * Kill process on running specific port `lsof -ti : <port number> | xargs kill `
- * EX: `lsof -ti :30333 | xargs kill`
+   * EX: `lsof -ti :30333 | xargs kill`
  * Purge the chain
  * Restart with Run the Test Node Command
  
