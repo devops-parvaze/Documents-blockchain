@@ -27,18 +27,18 @@
 
 ## Run the testnode
 
-*   ./target/release/frontier-template-node \
-	--base-path /tmp/alice \
-	--chain local \
-	--alice \
-	--port 30333 \
-	--ws-port 9944 \
-	--rpc-port 9933 \
-	--node-key 0000000000000000000000000000000000000000000000000000000000000001 \
-	--validator \
-	--unsafe-rpc-external \
-	--unsafe-ws-external \
-	--rpc-cors all
+    *  nohup ./target/release/frontier-template-node \
+		--base-path /tmp/alice \
+		--chain local \
+		--alice \
+		--port 30333 \
+		--ws-port 9944 \
+		--rpc-port 9933 \
+		--node-key 0000000000000000000000000000000000000000000000000000000000000001 \
+		--validator \
+		--unsafe-rpc-external \
+		--unsafe-ws-external \
+		--rpc-cors all &
 
 ----
 `--base-path` Specifies the directory for storing all of the data related to this chain.
@@ -63,18 +63,19 @@
 
 ---
 
-*   ./target/release/frontier-template-node \
-	--base-path /tmp/bob \
-	--chain local \
-	--bob \
-	--port 30334 \
-	--ws-port 9945 \
-	--rpc-port 9934 \
-	--validator \
-	--bootnodes /ip4/127.0.0.1/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp \
-	--unsafe-rpc-external \
-	--unsafe-ws-external \
-	--rpc-cors all
+	*  nohup ./target/release/frontier-template-node \
+		--base-path /tmp/bob \
+		--chain local \
+		--bob \
+		--port 30334 \
+		--ws-port 9945 \
+		--rpc-port 9934 \
+		--validator \
+		--bootnodes /ip4/127.0.0.1/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp \
+		--unsafe-rpc-external \
+		--unsafe-ws-external \
+		--rpc-cors all &
+  
 
 `--bootnodes` The `--bootnodes` option in the command you provided specifies the initial set of bootstrap nodes that your Substrate node will connect to when it starts up
 
@@ -84,19 +85,32 @@
 
 ---
 
-*   ./target/release/frontier-template-node \
-	--base-path /tmp/charlie \
-	--chain local \
-	--charlie \
-	--port 30335 \
-	--ws-port 9946 \
-	--rpc-port 9935 \
-	--validator \
-	--bootnodes /ip4/127.0.0.1/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp \
-	--unsafe-rpc-external \
-	--unsafe-ws-external \
-	--rpc-cors all
+     *  nohup ./target/release/frontier-template-node \
+		--base-path /tmp/charlie \
+		--chain local \
+		--charlie \
+		--port 30335 \
+		--ws-port 9946 \
+		--rpc-port 9935 \
+		--validator \
+		--bootnodes /ip4/127.0.0.1/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp \
+		--unsafe-rpc-external \
+		--unsafe-ws-external \
+		--rpc-cors all &
 
+
+## How to stop and Restart
+
+ * `lsof -ti : <port number> | xargs kill `
+ * Purge the chain
+ * Restart with Run the Test Node Command
+ 
+ // ```bash
+	ports=(<port1> <port2> <port2>)
+	for port in "${ports[@]}";do
+		lsof -ti:$port | xargs -9
+	done
+//  ```
 
 ## Connect To Polkadot Substrate Portal
 
