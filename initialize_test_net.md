@@ -1,6 +1,6 @@
 # Testnet
 
-## Connect To AWS Ubuntu Machine
+## Connect To AWS Ubuntu Machine (`NOT MANDATORY`)
 
 >Connect :: `ssh -i "test-svr-apm.pem" ubuntu@ec2-13-232-199-113.ap-south-1.compute.amazonaws.com`
 
