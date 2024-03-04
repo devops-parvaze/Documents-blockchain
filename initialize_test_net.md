@@ -7,10 +7,14 @@
 ---
 
 ## Clone the Repo (`Not Mandatory`)
-> `git clone --branch polkadot-v0.9.42 https://github.com/polkadot-evm/frontier.git`
+> `git clone  https://github.com/polkadot-evm/frontier.git`
+
 1. cd frontier
-2. cargo check
-3. cargo build
+2. git branch
+3. git checkout polkadot-v0.9.42
+4. cargo check
+5. cargo build
+   
 
 ---
 
