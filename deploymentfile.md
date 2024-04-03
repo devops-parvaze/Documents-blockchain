@@ -110,7 +110,6 @@ Purge the chain
 Restart with Run the Test Node Command
 
 
-
 ./target/release/argochain build-spec --disable-default-bootnode --chain local > customSpec.json
 
 ./target/release/argochain build-spec --chain=customSpec.json --raw --disable-default-bootnode > customSpecRaw.json
@@ -268,6 +267,4 @@ Validator 3
   --validator \
   --rpc-methods Unsafe \
   --name MyNode03 \
-  --bootnodes /ip4/127.0.0.1/tcp/30333/p2p/12D3KooWD2gJpHTGU6EAwNap7Sc1mBDfkhL7jseoqt8uQ8hZtSr5
-
-
+  --bootnodes /ip4/18.224.110.226/tcp/30333/p2p/12D3KooWD2gJpHTGU6EAwNap7Sc1mBDfkhL7jseoqt8uQ8hZtSr5
