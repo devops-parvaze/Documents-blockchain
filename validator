@@ -1,5 +1,44 @@
 ## Argochain Testnet
 
+###########################################################################################################################################
+Deployment:
+------------------------------------------------------------------------------------------------------------------
+sudo apt-get update
+sudo apt install build-essential -y
+
+apt install clang -y
+
+sudo apt install --assume-yes git clang curl libssl-dev protobuf-compiler
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+source $HOME/.cargo/env
+
+rustc --version
+
+rustup default stable
+rustup update
+
+rustup update nightly
+rustup target add wasm32-unknown-unknown --toolchain nightly
+
+rustup show
+rustup +nightly show
+
+git clone https://github.com/mitun567/Argochain.git
+
+Cd Argochain
+
+cargo update
+
+cargo build --release
+
+##############################################################################################################################################
+
+./target/release/argochain build-spec --disable-default-bootnode --chain local > customSpec.json
+
+./target/release/argochain build-spec --chain=customSpec.json --raw --disable-default-bootnode > customSpecRaw.json
+
 ## purge-chain 4 validator
 
 ./target/release/argochain purge-chain --base-path /tmp/node01 --chain customSpecRaw.json
@@ -39,6 +78,8 @@ Validator 1
 --suri 0xe020a42d9084762730a768c1ba2254186770b77d39e82899206429b050f7cc19 \
 --password-interactive \
 --key-type audi
+
+# Key password: prg@12345
 
 ## Commands to start the validators
 
@@ -87,6 +128,8 @@ Validator 2
 --suri 0x3feeda2930f647927e9f7c91091735581d3fd90150b936c7432885ac9aeb49a8 \
 --password-interactive \
 --key-type audi
+
+# Key password: prg@12345
 
 ## Commands to start the validators
 ## Local
@@ -149,6 +192,8 @@ Validator 3
 --password-interactive \
 --key-type audi
 
+# Key password: prg@12345
+
 ## Commands to start the validators
 ## Local
 
@@ -209,6 +254,8 @@ Validator 4
 --suri 0xa1dfcec096987c27da38289c12095faa3e8009d779d48d64eacb5f48eb6d14f5 \
 --password-interactive \
 --key-type audi
+
+# Key password: prg@12345
 
 ## Commands to start the validators
 ## Local
@@ -271,6 +318,8 @@ Validator 5
 --password-interactive \
 --key-type audi
 
+# Key password: prg@12345
+
 ## Commands to start the validators
 ## Local
 
@@ -331,6 +380,8 @@ Validator 6
 --suri 0xca66544e769de5e3ab49194b8233674dae1171c6d413101ebf40e583932258df \
 --password-interactive \
 --key-type audi
+
+# Key password: prg@12345
 
 ## Commands to start the validators
 ## Local
