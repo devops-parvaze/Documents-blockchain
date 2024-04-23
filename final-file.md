@@ -15,12 +15,6 @@ cd Argochain
 ```
 source ~/.cargo/env
 ```
-### Build the Argochain node. This compiles the necessary binaries:
-```
-cargo run --release
-```
-
-
 # ⛳ Getting Started
 
 Use this **QuickStart** command to build and launch the node:
@@ -35,9 +29,19 @@ By running the above command, all the necessary components will be pulled and th
 The following command can be used to explore all parameters and subcommands:
 
 ```
-./target/release/jur-node -h
+./target/release/Argochain -h
+```
+# 💻 <a name="dev-ecosystem">Development Ecosystem (Single Node)</a>
+
+The provided `cargo run` command will launch a temporary node and its state will be discarded after you terminate the process. Use the following command to build the node without launching it:
+
+```
+cargo build --release
 ```
 
+After the project has been built, you can see the binary in the location `./target/release/Argochain`.
+
+---
 ## purge-chain for a validator (If the node is running node and wants to run again.)
 ```
 ./target/release/argochain purge-chain --base-path /tmp/node01 --chain customSpecRaw.json
