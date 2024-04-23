@@ -39,7 +39,7 @@ The provided `cargo run` command will launch a temporary node and its state will
 cargo build --release
 ```
 
-After the project has been built, you can see the binary in the location `./target/release/Argochain`.
+After the project has been built, you can see the binary in the location `./target/release/argochain`.
 
 ---
 ## purge-chain for a validator (If the node is running node and wants to run again.)
