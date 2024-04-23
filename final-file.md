@@ -15,7 +15,7 @@ cd Argochain
 ```
 source ~/.cargo/env
 ```
-### Use this QuickStart command to build and launch the node.
+### Build the Argochain node. This compiles the necessary binaries:
 ```
 cargo run --release -- --dev
 ```
