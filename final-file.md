@@ -1,6 +1,6 @@
 ## Argochain Testnet
 
-### Requirements
+# Requirements
 Prepare your development environment [(Instructions)](https://docs.substrate.io/install/)
 
 ### Clone the Repo
@@ -18,6 +18,15 @@ source ~/.cargo/env
 ### Build the Argochain node. This compiles the necessary binaries:
 ```
 cargo run --release
+```
+
+
+# ⛳ Getting Started
+
+Use this **QuickStart** command to build and launch the node:
+
+```bash
+cargo run --release -- --dev
 ```
 By running the above command, all the necessary components will be pulled and the Argochain node will be started in development mode.
 
