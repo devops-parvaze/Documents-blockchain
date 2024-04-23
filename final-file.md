@@ -19,9 +19,17 @@ source ~/.cargo/env
 ```
 cargo run --release
 ```
-By running the above command, all the necessary components will be pulled and the Jur node will be started in development mode.
+By running the above command, all the necessary components will be pulled and the Argochain node will be started in development mode.
 
-## purge-chain for a validator ( If you already run a node, and now want to run it again)
+### List of all commands
+
+The following command can be used to explore all parameters and subcommands:
+
+```
+./target/release/jur-node -h
+```
+
+## purge-chain for a validator ( If you already run a node, and now want to run again.)
 ```
 ./target/release/argochain purge-chain --base-path /tmp/node01 --chain customSpecRaw.json
 ./target/release/argochain purge-chain --base-path /tmp/node02 --chain customSpecRaw.json
