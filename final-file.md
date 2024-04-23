@@ -29,7 +29,7 @@ By running the above command, all the necessary components will be pulled and th
 The following command can be used to explore all parameters and subcommands:
 
 ```
-./target/release/Argochain -h
+./target/release/argochain -h
 ```
 # 💻 <a name="dev-ecosystem">Development Ecosystem (Single Node)</a>
 
