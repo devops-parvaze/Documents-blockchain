@@ -55,7 +55,7 @@ After the project has been built, you can see the binary in the location `./targ
 ```
 rm -rf /tmp/node01 node02 node03 node04
 ```
-## Validator 1
+## Add the keys for Boot/RPC Node.
 We need to add the keys to each validator node using the command:
 ```
 ./target/release/argochain key insert --base-path /tmp/node01 \
@@ -89,7 +89,7 @@ We need to add the keys to each validator node using the command:
 --password-interactive \
 --key-type audi
 ```
-### Commands to start the validator node
+### Commands to start the Boot/RPC node
 ```
  nohup ./target/release/argochain \
 --base-path /tmp/node01 \
@@ -99,9 +99,9 @@ We need to add the keys to each validator node using the command:
 --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" \
 --validator \
 --rpc-methods Unsafe \
+--rpc-max-connections 10000 \
 --rpc-cors all \
---name MyNode01 \
---password-interactive &
+--name MyNode01 &
 ```
 ### To find the keys 
 ```
@@ -109,9 +109,9 @@ cat nohup.out
 ```
 KEY: 12D3KooWMaLkCFxbF4bQvi2R5bqWXtRyemdfnxp3EEsC19m3AT7A
 
-## Validator 2
+## Add keys for Validator 1
 
-### Port Forwarding: (Optional If we run on diffrent server)
+### Port Forwarding: (Optional If we run on a different server)
 ```
 ssh -i web-svr-kp-ohio.pem -L 9945:localhost:9945 -f -N USERNAME@Public-IP
 ```
@@ -178,7 +178,7 @@ nohup ./target/release/argochain \
   --bootnodes /ip4/13.59.14.144/tcp/30333/p2p/12D3KooWGdzJLDdDtWTEubMpWmoqDKrpbXNru4FUo7eWNrsXgME8 &
 ```
 ### Validator 3
-### Port Forwarding: (Optional If we run on diffrent server)
+### Port Forwarding: (Optional If we run on different servers)
 ```
 ssh -i web-svr-kp-ohio.pem -L 9945:localhost:9945 -f -N USERNAME@Public-IP
 ```
