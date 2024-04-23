@@ -53,7 +53,7 @@ After the project has been built, you can see the binary in the location `./targ
 ```
 ### Now delete the temp file
 ```
-rm -rf /tmp/node01 node02 node03 node04
+rm -rf /tmp/node01 node02 node03 node04 node05 node06
 ```
 ## Add the keys for Boot/RPC Node.
 We need to add the keys to each validator node using the command:
@@ -109,7 +109,7 @@ cat nohup.out
 ```
 KEY: 12D3KooWMaLkCFxbF4bQvi2R5bqWXtRyemdfnxp3EEsC19m3AT7A
 
-## Add keys for Validator 1
+## Add keys for Validator 2
 
 ### Port Forwarding: (Optional If we run on a different server)
 ```
@@ -175,9 +175,9 @@ nohup ./target/release/argochain \
   --unsafe-rpc-external \
   --rpc-cors all \
   --name MyNode02 \
-  --bootnodes /ip4/13.59.14.144/tcp/30333/p2p/12D3KooWGdzJLDdDtWTEubMpWmoqDKrpbXNru4FUo7eWNrsXgME8 &
+  --bootnodes /ip4/<IP-ADDRESS>/tcp/30333/p2p/12D3KooWGdzJLDdDtWTEubMpWmoqDKrpbXNru4FUo7eWNrsXgME8 &
 ```
-### Validator 3
+### Add keys for Validator 3
 ### Port Forwarding: (Optional If we run on different servers)
 ```
 ssh -i web-svr-kp-ohio.pem -L 9945:localhost:9945 -f -N USERNAME@Public-IP
@@ -242,10 +242,10 @@ nohup ./target/release/argochain \
   --unsafe-rpc-external \
   --rpc-cors all \
   --name MyNode03 \
-  --bootnodes /ip4/13.59.14.144/tcp/30333/p2p/12D3KooWGdzJLDdDtWTEubMpWmoqDKrpbXNru4FUo7eWNrsXgME8 &
+  --bootnodes /ip4/<IP-ADDRESS>/tcp/30333/p2p/12D3KooWGdzJLDdDtWTEubMpWmoqDKrpbXNru4FUo7eWNrsXgME8 &
 ```
-### Validator 4
-### Port Forwarding: (Optional If we run on diffrent server)
+### Add keys for Validator 4
+### Port Forwarding: (Optional If we run on a different server)
 ```
 ssh -i web-svr-kp-ohio.pem -L 9945:localhost:9945 -f -N USERNAME@Public-IP
 ```
@@ -309,10 +309,10 @@ nohup ./target/release/argochain \
 --unsafe-rpc-external \
 --rpc-cors all \
 --name MyNode04 \
---bootnodes /ip4/13.58.229.18/tcp/30333/p2p/12D3KooWGdzJLDdDtWTEubMpWmoqDKrpbXNru4FUo7eWNrsXgME8 &
+--bootnodes /ip4/<IP-ADDRESS>/tcp/30333/p2p/12D3KooWGdzJLDdDtWTEubMpWmoqDKrpbXNru4FUo7eWNrsXgME8 &
 ```
-### Validator 5
-### Port Forwarding: (Optional If we run on diffrent server)
+### Add keys for Validator 5
+### Port Forwarding: (Optional If we run on a different server)
 ```
 ssh -i web-svr-kp-ohio.pem -L 9945:localhost:9945 -f -N USERNAME@Public-IP
 ```
@@ -376,10 +376,10 @@ nohup ./target/release/argochain \
 --unsafe-rpc-external \
 --rpc-cors all \
 --name MyNode05 \
---bootnodes /ip4/13.58.229.18/tcp/30333/p2p/12D3KooWLSZ47SEDCwEvRRRg3efqhfUoYQocwusqbyRX68AGm2Wz &
+--bootnodes /ip4/<IP-ADDRESS>/tcp/30333/p2p/12D3KooWLSZ47SEDCwEvRRRg3efqhfUoYQocwusqbyRX68AGm2Wz &
 ```
-### Validator 6
-### Port Forwarding: (Optional If we run on diffrent server)
+### Add keys for Validator 6
+### Port Forwarding: (Optional If we run on a different server)
 ```
 ssh -i web-svr-kp-ohio.pem -L 9945:localhost:9945 -f -N USERNAME@Public-IP
 ```
@@ -443,5 +443,5 @@ nohup ./target/release/argochain \
 --unsafe-rpc-external \
 --rpc-cors all \
 --name MyNode06 \
---bootnodes /ip4/13.58.229.18/tcp/30333/p2p/12D3KooWLSZ47SEDCwEvRRRg3efqhfUoYQocwusqbyRX68AGm2Wz &
+--bootnodes /ip4/<IP-ADDRESS>/tcp/30333/p2p/12D3KooWLSZ47SEDCwEvRRRg3efqhfUoYQocwusqbyRX68AGm2Wz &
 ```
