@@ -17,7 +17,7 @@ source ~/.cargo/env
 ```
 ### Build the Argochain node. This compiles the necessary binaries:
 ```
-cargo run --release -- --dev
+cargo run --release
 ```
 By running the above command, all the necessary components will be pulled and the Jur node will be started in development mode.
 
