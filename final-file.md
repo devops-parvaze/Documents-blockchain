@@ -29,7 +29,7 @@ The following command can be used to explore all parameters and subcommands:
 ./target/release/jur-node -h
 ```
 
-## purge-chain for a validator ( If you already run a node, and now want to run again.)
+## purge-chain for a validator (If the node is running node and wants to run again.)
 ```
 ./target/release/argochain purge-chain --base-path /tmp/node01 --chain customSpecRaw.json
 ./target/release/argochain purge-chain --base-path /tmp/node02 --chain customSpecRaw.json
